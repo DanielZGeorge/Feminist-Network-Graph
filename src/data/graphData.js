@@ -71,7 +71,7 @@ export function generateGraphData() {
         { id: 'Winona LaDuke', group: groups.CHICANA },
         { id: 'Vandana Shiva', group: groups.ECO },
         { id: 'Carol Adams', group: groups.ECO },
-        { id: 'Ynestra King', group: groups.ECO }, // Added back if missing or just ensuring coverage
+        { id: 'Ynestra King', group: groups.ECO },
 
         // IV. Concepts & Events (Layer 3 - Leaf Nodes)
         { id: 'A Vindication of the Rights of Woman', group: groups.WAVE1 },
@@ -199,7 +199,7 @@ export function generateGraphData() {
         { source: 'First Wave Liberal Feminism', target: 'Sojourner Truth' },
         { source: 'First Wave Liberal Feminism', target: 'Ida B. Wells' },
         { source: 'First Wave Liberal Feminism', target: 'Alice Paul' },
-        { source: 'First Wave Liberal Feminism', target: 'Charlotte Bunch' }, // As requested in previous prompt
+        { source: 'First Wave Liberal Feminism', target: 'Charlotte Bunch' },
 
         // Second Wave
         { source: 'Second Wave Liberal Feminism', target: 'Simone de Beauvoir' },
@@ -328,7 +328,6 @@ export function generateGraphData() {
         { source: 'Carol Adams', target: 'The Absent Referent' },
 
         // --- Orphan Concepts (Level 1 -> Level 3) ---
-        // Concepts that don't have a specific figure listed above but belong to a wave
         { source: 'First Wave Liberal Feminism', target: 'Rationality as the Basis for Rights' },
         { source: 'First Wave Liberal Feminism', target: 'The "Citizen"' },
         { source: 'First Wave Liberal Feminism', target: 'Separate Spheres Ideology' },
@@ -387,6 +386,18 @@ export function generateGraphData() {
         { source: 'Fourth Wave / Glitch Feminism', target: 'Digital Existence & System Failure' },
         { source: 'Fourth Wave / Glitch Feminism', target: 'The Glitch' },
         { source: 'Fourth Wave / Glitch Feminism', target: 'Decentering Whiteness' },
+
+        // --- Cross-Group Connections (Requested) ---
+        { source: 'First Wave Liberal Feminism', target: 'Second Wave Liberal Feminism' },
+        { source: 'Patriarchy', target: 'White Radical Feminism' },
+        { source: 'Critique of Suffrage', target: 'First Wave Liberal Feminism' },
+        { source: 'Binary Thinking', target: 'Separate Spheres Ideology' },
+        { source: 'Seneca Falls Convention', target: 'Civil Rights Act of 1964' },
+        { source: 'Compulsory Heterosexuality', target: 'The Myth of the Vaginal Orgasm' },
+        { source: 'Critique of Tourism', target: 'Critique of Militarism' },
+        { source: 'Penis Envy', target: 'Compulsory Heterosexuality' },
+        { source: 'Decolonization', target: 'Critique of Tourism' },
+        { source: 'Environmental Justice', target: 'Ecofeminism' },
     ];
 
     // 3. Dynamic Sizing Logic

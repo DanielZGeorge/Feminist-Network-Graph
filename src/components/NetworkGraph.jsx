@@ -40,14 +40,7 @@ const NetworkGraph = () => {
             return newHighlights;
         });
 
-        // Camera focus removed as per request
-        // const distance = 60;
-        // const distRatio = 1 + distance / Math.hypot(node.x, node.y, node.z);
-        // fgRef.current.cameraPosition(
-        //     { x: node.x * distRatio, y: node.y * distRatio, z: node.z * distRatio },
-        //     node,
-        //     3000
-        // );
+
     }, [data, fgRef]);
 
     const handleBackgroundClick = useCallback(() => {
@@ -66,10 +59,10 @@ const NetworkGraph = () => {
             showNavInfo={false}
 
             // Nodes
-            nodeVal={node => node.val} // Already small in data (5-10)
+            nodeVal={node => node.val}
             nodeColor={node => {
                 if (highlightNodes.size > 0 && !highlightNodes.has(node)) {
-                    return '#333333'; // Dimmed
+                    return '#333333';
                 }
                 if (node.id === 'Feminism') return CENTRAL_NODE_COLOR;
                 return colors[node.group] || '#ffffff';
@@ -86,10 +79,10 @@ const NetworkGraph = () => {
 
             // Forces
             d3Force={('link', (force) => {
-                // Increase link distance to spread out the graph
+
                 force.distance(100);
             })}
-            d3VelocityDecay={0.1} // Lower decay for more movement/settling
+            d3VelocityDecay={0.1}
 
             // Interaction
             onNodeClick={handleNodeClick}

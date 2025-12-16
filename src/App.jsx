@@ -24,7 +24,7 @@ function App() {
           Feminist Network
         </h1>
         <p style={{ margin: '5px 0 0 0', opacity: 0.7, fontSize: '0.9rem' }}>
-          Interactive Visualization of Activists & Concepts
+          Expansion of the Interconnected Web of Feminist Theory
         </p>
       </div>
 
